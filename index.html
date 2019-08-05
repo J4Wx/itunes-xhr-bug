@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>iTunes XHR Bug POC</title>
+</head>
+
+<body>
+  <form id="form">
+    <fieldset>
+      <label>
+        Search Term
+      </label>
+      <input id="term" name="term" type="text" />
+    </fieldset>
+    <button type="submit">Search</button>
+  </form>
+
+  <div id="result">
+    <pre>
+      <code id="output"></code>
+    </pre>
+  </div>
+
+  <script type="text/javascript">
+    const form = document.getElementById('form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const term = document.getElementById('term').value;
+      const url = `https://itunes.apple.com/search?entity=software&term=${term}`
+      const output = document.getElementById('output');
+      fetch(url)
+        .then(res => res.json())
+        .then(data => output.innerHTML = data)
+        .catch(error => output.innerHTML =
+          `${error} \nAn error occurred - Check the console to verify a CORS issue`);
+    });
+  </script>
+</body>
+
+</html>
