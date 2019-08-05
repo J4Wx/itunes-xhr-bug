@@ -17,3 +17,8 @@ This means that the first origin to request search "ABC" is the only origin that
 The only solution so far is to disable web security in the browser, but this should not be seen as an option and a fix is required from iTunes.
 
 After a cursory read of the [search documentation](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/), in particular the cache architecture diagram, it appears the issue is related to the entire response being cached, including an Access-Control-Allow-Origin header.
+
+# POC
+
+https://itunes-cors-poc-1.herokuapp.com/
+https://itunes-cors-poc-2.herokuapp.com/
