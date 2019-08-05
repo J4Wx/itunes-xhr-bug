@@ -1,5 +1,7 @@
 # iTunes Search XHR Issue
 
+Initial Discovery by [Ben Brookes](https://github.com/brookesb91) and [Jamie Wood](https://github.com/J4Wx) @ [PixelBeardCo](https://pixelbeard.co).
+
 Whilst working with the iTunes search API we have uncovered an issue with CORS Headers.
 
 The essence of the issue is this:
