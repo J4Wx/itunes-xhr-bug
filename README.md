@@ -18,7 +18,11 @@ The only solution so far is to disable web security in the browser, but this sho
 
 After a cursory read of the [search documentation](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/), in particular the cache architecture diagram, it appears the issue is related to the entire response being cached, including an Access-Control-Allow-Origin header.
 
-# POC
+## Proof of Concept
 
-https://itunes-cors-poc-1.herokuapp.com/
-https://itunes-cors-poc-2.herokuapp.com/
+To demonstrate this issue we have deployed an application to send XHR Search Requests to the iTunes API. Send a request for a term using one of the pages below, then search for the same term on the other page. The search should fail on the second page, at that point you should check the console to validate the cause of the issue.
+
+If you use a common search term then you may encounter a CORS error on the first search because the term has already been reserved by another origin.
+
+* [Origin 1](https://itunes-cors-poc-1.herokuapp.com/)
+* [Origin 2](https://itunes-cors-poc-2.herokuapp.com/)
