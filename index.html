@@ -34,7 +34,7 @@
       const output = document.getElementById('output');
       fetch(url)
         .then(res => res.json())
-        .then(data => output.innerHTML = data)
+        .then(data => output.innerHTML = JSON.stringify(data))
         .catch(error => output.innerHTML =
           `${error} \nAn error occurred - Check the console to verify a CORS issue`);
     });
