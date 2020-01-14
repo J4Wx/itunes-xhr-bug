@@ -2,6 +2,8 @@
 
 Initial Discovery by [Ben Brookes](https://github.com/brookesb91) and [Jamie Wood](https://github.com/J4Wx) @ [PixelBeardCo](https://pixelbeard.co).
 
+This issue was reported to Apple via the appropriate means over 4 months ago, they've ignored my emails since then.
+
 Whilst working with the iTunes search API we have uncovered an issue with CORS Headers.
 
 The essence of the issue is this:
