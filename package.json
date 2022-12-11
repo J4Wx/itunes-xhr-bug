@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/J4Wx/itunes-xhr-bug#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   }
 }
